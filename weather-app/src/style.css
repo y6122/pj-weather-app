@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2em;
+
+  gap: 4em;
+}
+.title {
+  font-size: 2rem;
+}
+.title .line {
+  display: block;
+  margin-inline: auto;
+  width: 30%;
+  height: 5px;
+  background-color: blue;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+   border: 1px solid black;
+   max-width: 997px;
+}
+.wrapper form {
+  display: flex;
+  width: 50%;
+  min-width: 300px;
+}
+
+.wrapper form input[type='text']{
+  width: 80%;
+  height: 2.5em;
+  display: block;
+  border-right: none;
+}
+.wrapper form button{
+  width: 20%;
+  height: 2.5em;
+  border-left: none;
+}
+.wrapper #the-result{
+
+width: 100%;
+height: auto;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1em;
+
+
+
+text-align: center; 
+border: 1px solid black;
+
+}
+.wrapper #the-result .forecast{
+  padding:1em 2.2em;
+  background-color: #fff;
+  border-radius: 20px;
+  
+  
+
+
+}
+.wrapper #the-result .forecast .city{
+  font-size: 1.8rem;
+  margin-left: 0.4em;
+
+}
+
+.wrapper #the-result .forecast .city >sup{
+  font-size: 0.6rem;
+border-radius: 20px;
+
+  background-color: rgb(177, 113, 10);
+  padding:2px 4px;
+   margin-left: 0.4em;
+  color: #fff;
+}
+.wrapper #the-result .forecast .temprituer{
+  font-size: 5rem;
+}
+.wrapper #the-result .forecast .weather-text{
+  font-size: 1.8rem;
+
+}
