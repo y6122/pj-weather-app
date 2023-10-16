@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: gainsboro;
   display: flex;
@@ -27,10 +28,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     gap: 1em;
     width: 100%;
-   border: 1px solid black;
-   max-width: 997px;
+   
+   max-width: 1000px;
 }
 .wrapper form {
   display: flex;
@@ -43,32 +45,37 @@ body {
   height: 2.5em;
   display: block;
   border-right: none;
+  font-size: 1.1rem;
 }
 .wrapper form button{
   width: 20%;
   height: 2.5em;
   border-left: none;
+  font-size: 1.1rem;
+
 }
 .wrapper #the-result{
 
 width: 100%;
 height: auto;
-display: grid;
-grid-template-columns: repeat(3,1fr);
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
 gap: 1em;
 
 
 
 text-align: center; 
-border: 1px solid black;
+
 
 }
 .wrapper #the-result .forecast{
   padding:1em 2.2em;
-  background-color: #fff;
+  background-color: #5d68ff;
   border-radius: 20px;
-  
-  
+  width: 300px;
+  box-shadow: 1px 3px 10px gray;  
+  color:#efecec;
 
 
 }
@@ -93,4 +100,40 @@ border-radius: 20px;
 .wrapper #the-result .forecast .weather-text{
   font-size: 1.8rem;
 
+}
+
+@media(max-width:500px){
+  html{
+    font-size: 12px;
+  }
+  .wrapper{
+    width: 95%;
+  }
+  .wrapper form input[type='text']{
+    width: 80%;
+    height: 3em;
+    
+    
+  }
+  .wrapper form button{
+    width: 20%;
+    height: 3em;
+    
+  }
+
+  .wrapper #the-result{
+
+    
+    
+    
+    grid-template-columns: repeat(2,1fr);
+    gap: 2em;
+    padding-bottom: 1em;
+    
+    
+    
+    
+    
+    
+    }
 }
